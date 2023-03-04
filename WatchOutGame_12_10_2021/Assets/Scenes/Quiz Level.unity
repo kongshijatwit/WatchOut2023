@@ -4427,7 +4427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfdd42d4f8fb5a643b3360c54d1cf87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: schoolLevel
   playerPosition: {x: -6.4, y: -4.4}
   playerStorage: {fileID: 11400000, guid: d780117b6009e1e49ae658c1059e1168, type: 2}
   playerInventory: {fileID: 0}
@@ -4605,6 +4605,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1089864980256503865, guid: e67f700b4fc2783419504d8163ca05e9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.65545654
+      objectReference: {fileID: 0}
     - target: {fileID: 1204652714272400539, guid: e67f700b4fc2783419504d8163ca05e9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4976,7 +4981,6 @@ GameObject:
   - component: {fileID: 1604233092}
   - component: {fileID: 1604233091}
   - component: {fileID: 1604233090}
-  - component: {fileID: 1604233093}
   m_Layer: 5
   m_Name: Quit Button
   m_TagString: Untagged
@@ -5058,19 +5062,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 6
           m_FloatArgument: 0
-          m_StringArgument: 6
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1347929244}
-        m_TargetAssemblyTypeName: QuizSystem, Assembly-CSharp
-        m_MethodName: FixQuiz
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: schoolLevel
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1604233091
@@ -5111,18 +5103,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604233088}
   m_CullTransparentMesh: 1
---- !u!114 &1604233093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604233088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 030c89bdc4c25b84eb068f3e5c12659f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1681831814
 GameObject:
   m_ObjectHideFlags: 0

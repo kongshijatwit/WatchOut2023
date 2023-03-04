@@ -216,6 +216,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1089864980256503865, guid: e67f700b4fc2783419504d8163ca05e9,
         type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00012207031
+      objectReference: {fileID: 0}
+    - target: {fileID: 1089864980256503865, guid: e67f700b4fc2783419504d8163ca05e9,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.65545654
       objectReference: {fileID: 0}
@@ -228,6 +233,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206860915154955126, guid: e67f700b4fc2783419504d8163ca05e9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 412.09998
+      objectReference: {fileID: 0}
+    - target: {fileID: 1206860915154955126, guid: e67f700b4fc2783419504d8163ca05e9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18.961975
       objectReference: {fileID: 0}
     - target: {fileID: 2869348486644636473, guid: e67f700b4fc2783419504d8163ca05e9,
         type: 3}
@@ -394,6 +409,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
       objectReference: {fileID: 0}
+    - target: {fileID: 5971524957021286947, guid: e67f700b4fc2783419504d8163ca05e9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 254.84998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5971524957021286947, guid: e67f700b4fc2783419504d8163ca05e9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18.749023
+      objectReference: {fileID: 0}
     - target: {fileID: 6276432493324189742, guid: e67f700b4fc2783419504d8163ca05e9,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -403,6 +428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276432493723565238, guid: e67f700b4fc2783419504d8163ca05e9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20.400024
       objectReference: {fileID: 0}
     - target: {fileID: 6783056941069933305, guid: e67f700b4fc2783419504d8163ca05e9,
         type: 3}
@@ -1010,6 +1040,10 @@ PrefabInstance:
     - target: {fileID: 658301488, guid: 0334b0b6625c15a43b7283b16a2ff7ef, type: 3}
       propertyPath: currentStress
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872890694, guid: 0334b0b6625c15a43b7283b16a2ff7ef, type: 3}
+      propertyPath: sceneName
+      value: ItemMenu
       objectReference: {fileID: 0}
     - target: {fileID: 890335264157220053, guid: 0334b0b6625c15a43b7283b16a2ff7ef,
         type: 3}
@@ -3386,8 +3420,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755305458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4.7633, y: 3.0756, z: 0}
+  m_LocalScale: {x: 0.42894742, y: 0.46017802, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1332145101}
@@ -3405,9 +3439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfdd42d4f8fb5a643b3360c54d1cf87e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
-  playerPosition: {x: 0, y: 0}
-  playerStorage: {fileID: 0}
+  sceneName: ItemMenu
+  playerPosition: {x: -1, y: -1}
+  playerStorage: {fileID: 11400000, guid: d780117b6009e1e49ae658c1059e1168, type: 2}
   playerInventory: {fileID: 0}
   initialize: 0
 --- !u!19719996 &755305461
@@ -3636,7 +3670,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4, y: 3.5}
+  m_Offset: {x: -6.7232876, y: 5.9485703}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3647,7 +3681,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 26, y: 7}
+  m_Size: {x: 3.545868, y: 2.1028595}
   m_EdgeRadius: 0
 --- !u!1001 &839524292
 PrefabInstance:

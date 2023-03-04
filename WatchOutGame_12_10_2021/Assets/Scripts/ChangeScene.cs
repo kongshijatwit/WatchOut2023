@@ -12,27 +12,31 @@ public class ChangeScene : MonoBehaviour
     public Vector2 playerPosition;
     public VectorValue playerStorage;
     public Inventory playerInventory;
-    public bool initialize;    
+   
+    public bool initialize;
 
     //Method for changing the scene when clicking a button (Ex: going from the shop back to the pharmacy)
-    public void changeSceneTo(string sceneName) {
-        if(initialize) //basically if the scene change
-        {
-            playerInventory.clear();
+
+        public void changeSceneTo(string sceneName) {
+            if(initialize) //basically if the scene change
+            {
+                playerInventory.clear();
+            }
+            playerStorage.initialValue = playerPosition;
+            SceneManager.LoadScene(sceneName);
         }
-        playerStorage.initialValue = playerPosition;
-        SceneManager.LoadScene(sceneName);
-    }
-    
-    //Method for changing the scene when the player walks into an object (Ex: walking into a door to leave a building)
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Checks if object colliding is the player based on the object's tag
-        if (collision.CompareTag("Player") && !collision.isTrigger)
+
+
+        //Method for changing the scene when the player walks into an object (Ex: walking into a door to leave a building)
+        public void OnTriggerEnter2D(Collider2D collision)
         {
-            changeSceneTo(sceneName);
-            
+            //Checks if object colliding is the player based on the object's tag
+            if (collision.CompareTag("Player") && !collision.isTrigger)
+            {
+                changeSceneTo(sceneName);
+
+            }
         }
-    }
+     
 
 }

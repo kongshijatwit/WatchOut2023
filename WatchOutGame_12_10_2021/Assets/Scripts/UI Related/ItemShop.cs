@@ -8,12 +8,45 @@ using TMPro;
 //Used for managing item shop menu
 public class ItemShop : MonoBehaviour
 {
-    private int[] itemCosts = {1,2,3,5,2,5}; // Each items cost in the order of: cloth mask, surgical mask, n95 mask, face shield, gloves, vaccine
+    private int[] itemCosts = {1,2,3,5,2,5,2,6,1,5,4,3}; // Each items cost in the order of: cloth mask, surgical mask, n95 mask, face shield, gloves, hand sanitizer, soda, chocolate, water, popcorn, milk tea, gummy bear
     public PlayerMoneyScript PlayerMoneyScript;
     public GameObject notEnough;
     public TextMeshProUGUI descriptionText;
     public GameObject description;
  
+    
+
+    //Gummy Bear UI Assests
+    [Header("Gummy Bear Information")]
+    public TextMeshProUGUI labelGummyBear;
+    public GameObject buttonGummyBear;
+
+    //Soda UI Assests
+    [Header("Soda Information")]
+    public TextMeshProUGUI labelSoda;
+    public GameObject buttonSoda;
+
+    //Chocolate UI Assests
+    [Header("Chocolate Information")]
+    public TextMeshProUGUI labelChocolate;
+    public GameObject buttonChocolate;
+
+    //Water UI Assests
+    [Header("Water Information")]
+    public TextMeshProUGUI labelWater;
+    public GameObject buttonWater;
+
+    //Popcorn UI Assests
+    [Header("Popcorn Information")]
+    public TextMeshProUGUI labelPopcorn;
+    public GameObject buttonPopcorn;
+
+    //Tea UI Assests
+    [Header("Tea Information")]
+    public TextMeshProUGUI labelTea;
+    public GameObject buttonTea;
+
+
     //Cloth Mask UI Assests
     [Header("Cloth Mask Information")]
     public TextMeshProUGUI labelClothMask;
@@ -74,7 +107,118 @@ public class ItemShop : MonoBehaviour
        
     }
 
-  public void buySurgicalMask()
+    public void buyGummyBear()
+    {
+
+        if (PlayerMoneyScript.money >= itemCosts[11])
+        {
+            notEnough.SetActive(false);
+            PlayerMoneyScript.loseMoney(itemCosts[11]);
+            playerInventory.addMask(purchasableItems[11]);
+            ReportPurchase("Gummy Bear");
+        }
+        else
+        {
+            tooPoor();
+        }
+
+
+    }
+
+    public void buyWater()
+    {
+
+        if (PlayerMoneyScript.money >= itemCosts[8])
+        {
+            notEnough.SetActive(false);
+            PlayerMoneyScript.loseMoney(itemCosts[8]);
+            playerInventory.addMask(purchasableItems[8]);
+            ReportPurchase("Water");
+        }
+        else
+        {
+            tooPoor();
+        }
+
+
+    }
+
+    public void buySoda()
+    {
+
+        if (PlayerMoneyScript.money >= itemCosts[6])
+        {
+            notEnough.SetActive(false);
+            PlayerMoneyScript.loseMoney(itemCosts[6]);
+            playerInventory.addMask(purchasableItems[6]);
+            ReportPurchase("Soda");
+        }
+        else
+        {
+            tooPoor();
+        }
+
+
+    }
+
+    public void buyChocolate()
+    {
+
+        if (PlayerMoneyScript.money >= itemCosts[7])
+        {
+            notEnough.SetActive(false);
+            PlayerMoneyScript.loseMoney(itemCosts[7]);
+            playerInventory.addMask(purchasableItems[7]);
+            ReportPurchase("Chocolate");
+        }
+        else
+        {
+            tooPoor();
+        }
+
+
+    }
+
+    public void buyPopcorn()
+    {
+
+        if (PlayerMoneyScript.money >= itemCosts[9])
+        {
+            notEnough.SetActive(false);
+            PlayerMoneyScript.loseMoney(itemCosts[9]);
+            playerInventory.addMask(purchasableItems[9]);
+            ReportPurchase("Popcorn");
+        }
+        else
+        {
+            tooPoor();
+        }
+
+
+    }
+
+    public void buyTea()
+    {
+
+        if (PlayerMoneyScript.money >= itemCosts[10])
+        {
+            notEnough.SetActive(false);
+            PlayerMoneyScript.loseMoney(itemCosts[10]);
+            playerInventory.addMask(purchasableItems[10]);
+            ReportPurchase("Tea");
+        }
+        else
+        {
+            tooPoor();
+        }
+
+
+    }
+    
+
+
+    
+    public void buySurgicalMask()
     {
          
         if (PlayerMoneyScript.money >= itemCosts[1]) 
@@ -155,13 +299,12 @@ public class ItemShop : MonoBehaviour
 
     public void buyVaccine()
     {
-        if (PlayerMoneyScript.money >= itemCosts[5]) 
+        if (PlayerMoneyScript.money >= itemCosts[6]) 
         {
             notEnough.SetActive(false);
-            PlayerMoneyScript.loseMoney(itemCosts[5]); 
-            //PlayerStats.boughtVaccine();
-           // purchasedVaccine();
-           // hideVaccine();
+            PlayerMoneyScript.loseMoney(itemCosts[6]);
+            playerInventory.addMask(purchasableItems[6]);
+            ReportPurchase("Hand Sanitizer");
         }
         else 
         {
@@ -193,6 +336,18 @@ public class ItemShop : MonoBehaviour
     public void hideClothMask ()
     {
        description.SetActive(false);
+    }
+
+    public void showGummyBear()
+    {
+        descriptionText.text = "";
+        description.SetActive(true);
+        notEnough.SetActive(false);
+    }
+
+    public void hideGummyBear()
+    {
+        description.SetActive(false);
     }
 
     public void showSurgicalMask ()
@@ -266,6 +421,69 @@ public class ItemShop : MonoBehaviour
     {
        description.SetActive(false);
     }
+
+    public void showSoda()
+    {
+        descriptionText.text = "";
+        description.SetActive(true);
+        notEnough.SetActive(false);
+    }
+
+    public void hideSoda()
+    {
+        description.SetActive(false);
+    }
+
+    public void showChocolate()
+    {
+        descriptionText.text = "";
+        description.SetActive(true);
+        notEnough.SetActive(false);
+    }
+
+    public void hideChocolate()
+    {
+        description.SetActive(false);
+    }
+
+    public void showWater()
+    {
+        descriptionText.text = "";
+        description.SetActive(true);
+        notEnough.SetActive(false);
+    }
+
+    public void hideWater()
+    {
+        description.SetActive(false);
+    }
+
+    public void showPopcorn()
+    {
+        descriptionText.text = "";
+        description.SetActive(true);
+        notEnough.SetActive(false);
+    }
+
+    public void hidePopcorn()
+    {
+        description.SetActive(false);
+    }
+
+    public void showTea()
+    {
+        descriptionText.text = "";
+        description.SetActive(true);
+        notEnough.SetActive(false);
+    }
+
+    public void hideTea()
+    {
+        description.SetActive(false);
+    }
+
+    
+
 
 
     public void ReportPurchase(string itemName){
