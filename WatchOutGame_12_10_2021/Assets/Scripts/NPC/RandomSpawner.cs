@@ -1,32 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-//Class for spawning the NPCS, uses one NPC object from the scene and spawns a set number of that object, the NPCs create a challenge for the players
-
+/// <summary>
+/// This is the script that spawn NPCs
+/// </summary>
 public class RandomSpawner : MonoBehaviour
 {
-    public GameObject npc; //What the spawners creates repeatedly
-    public GameObject npcSpawner;
-    public float radius = 1; //Size of spawner
-    public int numberOfNPC; //Number of objects to spawn
-    
-    //Spawns the object the number of times desired
+    [SerializeField] private GameObject npcPrefab;
+    [SerializeField] private float spawnerRadius = 1;
+    [SerializeField] private int spawnAmount;
+
     void Start()
     {
-        Vector2 position = npcSpawner.transform.position;
-        // instead of 2, replace with numberOfNPC
-        for (int i = 0; i < 2; i++) 
+        for (int i = 0; i < spawnAmount; i++)
         {
-            Vector2 randomPos = position + Random.insideUnitCircle * radius ;
-            Instantiate(npc, randomPos, Quaternion.identity);
+            Vector2 randomPos = (Vector2)transform.position + Random.insideUnitCircle * spawnerRadius;
+            Instantiate(npcPrefab, randomPos, Quaternion.identity);
         }
     }
 
     //Shows an outline of the spawn radius
-    private void OnDrawGizmos() 
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(this.transform.position, radius);
+        Gizmos.DrawWireSphere(this.transform.position, spawnerRadius);
     }
 }
