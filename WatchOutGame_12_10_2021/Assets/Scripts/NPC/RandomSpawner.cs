@@ -15,7 +15,10 @@ public class RandomSpawner : MonoBehaviour
     void Start()
     {
         Vector2 position = npcSpawner.transform.position;
+<<<<<<< Updated upstream
         // instead of 2, replace with numberOfNPC
+=======
+>>>>>>> Stashed changes
         for (int i = 0; i < 2; i++) 
         {
             Vector2 randomPos = position + Random.insideUnitCircle * radius ;

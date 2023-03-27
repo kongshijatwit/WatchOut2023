@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-<<<<<<<< Updated upstream:WatchOutGame_12_10_2021/Assets/Sprites/Materials/pencil.png.meta
-guid: 15b7b37d3a8bbe74f9f67e7a34005e8f
-========
-guid: 4719806b1fa01234999af4d3a4d840fc
->>>>>>>> Stashed changes:WatchOutGame_12_10_2021/Assets/Sprites/Materials/Untitled.png.meta
-=======
-guid: 4473bedd508aa38418d2bbcc554f4084
->>>>>>> Stashed changes
+guid: bb5aca30ff0624a45beb1e39ce3c92d5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -109,8 +101,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< Updated upstream
-=======
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -135,7 +125,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> Stashed changes
   spriteSheet:
     serializedVersion: 2
     sprites: []
